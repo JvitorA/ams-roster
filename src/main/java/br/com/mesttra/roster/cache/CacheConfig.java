@@ -23,7 +23,7 @@ public class CacheConfig {
     @Bean
     public RedisCacheManagerBuilderCustomizer redisCacheManagerBuilderCustomizer() {
         return (builder) -> builder
-                .withCacheConfiguration("players",
+                .withCacheConfiguration("orders",
                         RedisCacheConfiguration.defaultCacheConfig().entryTtl(Duration.ofSeconds(90)));
     }
 
